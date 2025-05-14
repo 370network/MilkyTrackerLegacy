@@ -76,6 +76,8 @@ bool Tracker::getFullScreenFlagFromDatabase()
 		delete settingsDatabaseCopy;
 	}
 
+	fullScreen = true;
+
 	return fullScreen;
 }
 
@@ -91,6 +93,8 @@ pp_int32 Tracker::getScreenScaleFactorFromDatabase()
 		scaleFactor = settingsDatabaseCopy->restore("SCREENSCALEFACTOR")->getIntValue();
 		delete settingsDatabaseCopy;
 	}
+
+	scaleFactor = 2;
 
 	return scaleFactor;
 }
